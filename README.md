@@ -30,6 +30,3 @@ root@k8s-master:~# systemctl status kubelet
 
  - web-pod.yaml создан по инструкциям
  - frontend-pod-healthy.yaml нужно создать с учетом ENV переменных
-
-
-
