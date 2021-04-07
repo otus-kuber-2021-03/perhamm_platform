@@ -43,12 +43,14 @@ root@k8s-master:~# systemctl status kubelet
 
  -  yaml файлы созданы ))
  -  Сделал blue-green и Reverse Rolling Update так
- blue-green:
+
+blue-green:
 ```
       maxSurge: 3
       maxUnavailable: 0
 ```
- Reverse Rolling Update :
+
+Reverse Rolling Update :
 ```
       maxSurge: 0
       maxUnavailable: 1
