@@ -32,4 +32,31 @@ root@k8s-master:~# systemctl status kubelet
  - frontend-pod-healthy.yaml нужно создать с учетом ENV переменных
 
 
+# ДЗ №2 (Механика запуска и взаимодействия контейнеров в Kubernetes)
 
+ - [ ] Создать файлы манифестов RS Deploment и Daemonset
+ - [ ] * Релизовать blue-green и Reverse Rolling Update
+ - [ ] ** Сделать Daemonset запускаемым на мастер ноде
+
+
+## Решение ДЗ:
+
+ -  yaml файлы созданы ))
+ -  Сделал blue-green и Reverse Rolling Update так
+
+blue-green:
+```
+      maxSurge: 3
+      maxUnavailable: 0
+```
+
+Reverse Rolling Update :
+```
+      maxSurge: 0
+      maxUnavailable: 1
+```
+ -  Сделал Daemonset запускаемым на мастер ноде так
+```
+      tolerations:
+      - operator: Exists
+```
